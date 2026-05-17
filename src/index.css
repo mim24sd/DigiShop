@@ -1,0 +1,36 @@
+@import './assets/css/reset.css';
+@import "tailwindcss";
+
+@keyframes blinkText {
+    0%,
+    100% {
+        color: white;
+    }
+    50% {
+        color: black;
+    }
+}
+
+.blink-text {
+    animation: blinkText 1.2s ease-in-out infinite;
+}
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    width: 18px;
+    border-radius: 9999px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
