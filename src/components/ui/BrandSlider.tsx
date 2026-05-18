@@ -23,7 +23,6 @@ const BrandSlider = ({
     return (
         <div dir="rtl" className="w-full max-w-[1360px] sm:mx-auto px-0 lg:px-4 xl:px-0">
             <div
-                dir="rtl"
                 className="group/container relative w-full rounded-2xl border border-gray-200 bg-white p-4"
             >
                 <div className="mb-6 flex items-center justify-center">
@@ -38,7 +37,8 @@ const BrandSlider = ({
                     slidesPerGroup={1}
                     hideNavigationOnMobile={hideNavigationOnMobile}
                     renderItem={(brand, index) => (
-                        <div className={`flex h-[120px] items-center justify-center ${index < brands.length - 1 ? "border-l border-gray-200" : ""}`}>
+                        <div
+                            className={`flex h-[120px] items-center justify-center ${index < brands.length - 1 ? "border-l border-gray-200" : ""}`}>
                             <img
                                 src={brand.image}
                                 alt={`brand-${brand.id}`}

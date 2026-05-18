@@ -1,8 +1,8 @@
 import React from 'react';
-import type { ProductSliderSection } from './FeatureCardListMobile';
+import type {ProductSliderSection} from './FeatureCardListMobile';
 
-const FeatureCard: React.FC<{ section: ProductSliderSection }> = ({ section }) => {
-    const { title, subtitle, products, link } = section;
+const FeatureCard: React.FC<{ section: ProductSliderSection }> = ({section}) => {
+    const {title, subtitle, products, link} = section;
     const images = products.slice(0, 4).map((p) => p.image);
 
     return (
@@ -28,8 +28,10 @@ const FeatureCard: React.FC<{ section: ProductSliderSection }> = ({ section }) =
             </div>
 
             {/* Footer Link */}
-            <a href={link} className="mt-4 flex items-center justify-center gap-1 text-cyan-500 text-xs font-medium hover:text-cyan-600 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-3 h-3">
+            <a href={link}
+               className="mt-4 flex items-center justify-center gap-1 text-cyan-500 text-xs font-medium hover:text-cyan-600 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5}
+                     stroke="currentColor" className="w-3 h-3">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
                 </svg>
                 <span>مشاهده</span>
@@ -38,18 +40,16 @@ const FeatureCard: React.FC<{ section: ProductSliderSection }> = ({ section }) =
     );
 };
 
-const FeatureCardList: React.FC<{ data: ProductSliderSection[] }> = ({ data }) => {
+const FeatureCardList: React.FC<{ data: ProductSliderSection[] }> = ({data}) => {
     return (
-        /* استفاده از divide-x-reverse برای ایجاد خط در حالت RTL
-           و border برای دور کل مجموعه
-        */
-        <div
-            className="grid grid-cols-4 dir-rtl border border-gray-200 rounded-xl overflow-hidden bg-white divide-x divide-gray-200"
-            dir="rtl"
-        >
-            {data.map((item) => (
-                <FeatureCard key={item.id} section={item}/>
-            ))}
+        <div dir="rtl" className="w-full max-w-[1360px] sm:mx-auto px-0 lg:px-4 xl:px-0">
+            <div
+                className="grid grid-cols-4 dir-rtl border border-gray-200 rounded-xl overflow-hidden bg-white divide-x divide-gray-200"
+            >
+                {data.map((item) => (
+                    <FeatureCard key={item.id} section={item}/>
+                ))}
+            </div>
         </div>
     );
 };

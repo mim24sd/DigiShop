@@ -17,7 +17,6 @@ const BrandSliderMobile = ({
                          title = "محبوب‌ترین برندها",
                      }: BrandSliderProps) => {
     return (
-        <div dir="rtl" className="w-full max-w-[1360px] sm:mx-auto px-0 lg:px-4 xl:px-0">
             <div
                 dir="rtl"
                 className="group/container relative w-full p-4"

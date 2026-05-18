@@ -13,7 +13,7 @@ interface ProductSliderMobileProps {
     title?: string;
 }
 
-const ProductSliderMobile: React.FC<ProductSliderMobileProps> = ({
+const  ProductSliderMobile: React.FC<ProductSliderMobileProps> = ({
                                                                      products = [],
                                                                      title = "پرفروش‌ترین کالاها",
                                                                  }) => {
