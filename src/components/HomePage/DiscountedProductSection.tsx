@@ -1,6 +1,6 @@
 import {ProductCardList, type DiscountedProduct} from "../ui/ProductCardList.tsx";
 
-export const sampleProducts: DiscountedProduct[] = [
+const sampleProducts: DiscountedProduct[] = [
     {
         id: "1",
         title: "گوشی موبایل سامسونگ مدل Galaxy A14",

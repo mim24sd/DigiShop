@@ -23,7 +23,7 @@ const createProducts = (prefix: string) => [
     {id: `${prefix}-4`, title: "محصول چهارم", image: `https://picsum.photos/seed/${prefix}-4/300/300`, price: "۵۵,۰۰۰"},
 ];
 
-export const MOCK_RECOMMENDATIONS: ProductSliderSection[] = [
+const MOCK_RECOMMENDATIONS: ProductSliderSection[] = [
     {
         id: "1",
         title: "کیف و کاور گوشی",

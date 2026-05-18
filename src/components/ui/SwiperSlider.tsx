@@ -74,8 +74,8 @@ const SwiperSlider = <T,>({
                 slidesOffsetAfter={slidesOffsetAfter}
                 breakpoints={computedBreakpoints}
                 navigation={{
-                    prevEl: prevButtonRef.current,
-                    nextEl: nextButtonRef.current,
+                    prevEl: null,
+                    nextEl: null,
                 }}
                 onBeforeInit={(swiper) => {
                     if (typeof swiper.params.navigation === "boolean" || !swiper.params.navigation) {

@@ -1,6 +1,6 @@
 import {FeatureCardList} from '../ui/FeatureCardList';
 
-export interface ProductSection {
+interface ProductSection {
     id: string;
     title: string;
     subtitle: string;
@@ -16,7 +16,7 @@ const createImages = (prefix: string) => [
     `https://picsum.photos/seed/${prefix}-4/300/300`,
 ];
 
-export const MOCK_RECOMMENDATIONS: ProductSection[] = [
+const MOCK_RECOMMENDATIONS: ProductSection[] = [
     {
         id: "1",
         title: "کیف و کاور گوشی",

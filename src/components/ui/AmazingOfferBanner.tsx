@@ -115,8 +115,6 @@ function useVisibleItemsCount(
     }, [itemsLength, containerRef, startRef, endButtonRef]);
 
     useEffect(() => {
-        calculateVisibleCount();
-
         const observer = new ResizeObserver(() => {
             calculateVisibleCount();
         });

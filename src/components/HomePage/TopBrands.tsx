@@ -7,7 +7,7 @@ interface BrandsProps {
     image: string
 }
 
-export const brands: BrandsProps[] = [
+const brands: BrandsProps[] = [
     {id: "1", name: "Apple", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/apple.svg"},
     {id: "2", name: "Samsung", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/samsung.svg"},
     {id: "3", name: "Google", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/google.svg"},

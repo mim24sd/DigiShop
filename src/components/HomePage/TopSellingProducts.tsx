@@ -1,7 +1,7 @@
 import ProductSlider from "../ui/ProductSlider.tsx";
 import ProductSliderMobile from "../ui/ProductSliderMobile.tsx";
 
-export const sampleData = [
+const sampleData = [
     { id: "1",  rank: "۱",  title: "نوشیدنی آناناس رانی ۲۴۰ میلی‌لیتر بسته ۶ عددی",  image: "https://picsum.photos/seed/product1/400/400" },
     { id: "2",  rank: "۲",  title: "قرص بیوپانتن یوروویتال ۶۰ عددی",                 image: "https://picsum.photos/seed/product2/400/400" },
     { id: "3",  rank: "۳",  title: "گوشی موبایل سامسونگ Galaxy A14",                  image: "https://picsum.photos/seed/product3/400/400" },

@@ -1,6 +1,6 @@
 import ReadingSection, { type ReadingItem } from "../ui/ReadingSection";
 
-export const readingItems: ReadingItem[] = [
+const readingItems: ReadingItem[] = [
     {
         id: 1,
         title: "هنگام حملات هوایی در خانه و خیابان چه کنیم؟",
