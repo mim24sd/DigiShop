@@ -29,7 +29,6 @@ const IconCategory: React.FC<ImageTextListProps> = ({items}) => {
                             key={index}
                             className="flex flex-col items-center gap-2 cursor-pointer"
                         >
-                            {/* circle */}
                             <div
                                 className={`flex items-center justify-center rounded-full  ${
                                     isMore
@@ -47,8 +46,6 @@ const IconCategory: React.FC<ImageTextListProps> = ({items}) => {
                                     />
                                 )}
                             </div>
-
-                            {/* title */}
 
                             <span className="text-xs text-gray-700 text-center line-clamp-2">
                                 {isMore ? "بیشتر" : item.title}

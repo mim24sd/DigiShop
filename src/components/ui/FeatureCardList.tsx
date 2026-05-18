@@ -7,13 +7,11 @@ const FeatureCard: React.FC<{ section: ProductSliderSection }> = ({section}) => 
 
     return (
         <div className="flex flex-col p-4">
-            {/* Header Section */}
             <div className="text-right mb-4">
                 <h3 className="text-gray-800 text-md font-bold leading-7">{title}</h3>
                 <p className="text-gray-400 text-[11px]">{subtitle}</p>
             </div>
 
-            {/* 2x2 Image Grid with Inner Lines Only */}
             <div className="grid grid-cols-2 gap-[1px] bg-gray-200">
                 {images.map((img, index) => (
                     <div key={index} className="aspect-square flex items-center justify-center p-4 bg-white">
@@ -27,7 +25,6 @@ const FeatureCard: React.FC<{ section: ProductSliderSection }> = ({section}) => 
                 ))}
             </div>
 
-            {/* Footer Link */}
             <a href={link}
                className="mt-4 flex items-center justify-center gap-1 text-cyan-500 text-xs font-medium hover:text-cyan-600 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5}

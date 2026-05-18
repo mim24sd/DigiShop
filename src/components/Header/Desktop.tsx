@@ -15,7 +15,6 @@ import logo from "../../assets/images/logo/full.svg";
 const DesktopHeader = () => {
     return (
         <div className="hidden lg:block">
-            {/*First Section + Logo */}
             <div className="flex items-center justify-between gap-4 py-3">
                 <div className="flex min-w-0 items-center gap-4">
                     <img
@@ -55,7 +54,6 @@ const DesktopHeader = () => {
                 </div>
             </div>
 
-            {/*Second Section + Navbar */}
             <div className="flex items-center justify-between gap-4 py-1 text-sm text-gray-700">
                 <div className="flex flex-wrap items-center gap-5">
                     <button className="flex cursor-pointer items-center gap-2 text-lg font-medium text-gray-800">

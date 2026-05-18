@@ -1,6 +1,5 @@
 import React from "react";
 import SwiperSlider from "./SwiperSlider";
-import {ChevronLeft} from "lucide-react";
 
 export interface CategoryItem {
     image: string;

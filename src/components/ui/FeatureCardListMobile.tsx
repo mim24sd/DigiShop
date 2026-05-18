@@ -25,7 +25,6 @@ interface FeatureCardListProps {
 const ProductCard: React.FC<{ product: ProductItem }> = ({product}) => {
     return (
         <div className="min-w-[140px] overflow-hidden rounded-2xl border border-zinc-200 bg-white">
-            {/* Image */}
             <div className="flex w-[138px] h-[140px] items-center justify-center bg-zinc-100">
                 <img
                     src={product.image}
@@ -35,14 +34,11 @@ const ProductCard: React.FC<{ product: ProductItem }> = ({product}) => {
                 />
             </div>
 
-            {/* Content */}
             <div className=" flex flex-col p-2 gap-2 h-[96px] justify-between">
-                {/* Title */}
                 <h3 className=" text-xs leading-5 text-zinc-800">
                     {product.title}
                 </h3>
                 <div>
-                    {/* Discount + Old Price */}
                     {(product.discount || product.oldPrice) && (
                         <div className=" flex items-center gap-2">
                             {product.discount && (
@@ -58,7 +54,6 @@ const ProductCard: React.FC<{ product: ProductItem }> = ({product}) => {
                         </div>
                     )}
 
-                    {/* Final Price */}
                     <div className="flex items-end gap-1">
                         <span className="text-base font-extrabold leading-none text-indigo-950">
                         {product.price}
@@ -77,7 +72,6 @@ const SectionBlock: React.FC<{ section: ProductSliderSection }> = ({section}) =>
 
     return (
         <section className="w-full" dir="rtl">
-            {/* Header */}
             <div className="mb-7 flex items-start justify-between">
                 <div>
                     <h2 className="text-sm font-bold text-zinc-900">
@@ -93,7 +87,6 @@ const SectionBlock: React.FC<{ section: ProductSliderSection }> = ({section}) =>
                 </a>
             </div>
 
-            {/* Products */}
             <div className="flex gap-4 overflow-x-auto pb-2">
                 {products.map((product) => (
                     <ProductCard key={product.id} product={product}/>

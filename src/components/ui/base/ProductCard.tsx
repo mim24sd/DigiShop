@@ -6,8 +6,6 @@ interface ProductCardProps {
     hasTitle?: boolean;
 }
 
-/** --- کامپوننت‌های کوچک و کمکی برای خوانایی بیشتر --- **/
-
 const TomanIcon = ({ className = "w-6 h-6 fill-gray-800" }: { className?: string }) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -39,12 +37,9 @@ const OriginalPrice = ({ price, className = "" }: { price: string; className?: s
   </span>
 );
 
-/** --- کامپوننت اصلی --- **/
-
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     return (
         <div className="flex flex-col p-2">
-            {/* Product Image */}
             <div className="flex items-center justify-center mb-1 w-full">
                 <img
                     src={product.image}
@@ -53,7 +48,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 />
             </div>
 
-            {/* --- Desktop Layout (LG) --- */}
             <div className="hidden lg:flex flex-col mb-1">
                 <div className="flex items-center justify-between w-full mb-1">
                     <DiscountBadge percentage={product.discountPercentage} />
@@ -64,7 +58,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 </div>
             </div>
 
-            {/* --- Mobile Layout (< LG) --- */}
             <div className="flex lg:hidden flex-col mb-1">
                 <div className="flex items-center justify-start gap-2 w-full mb-1">
                     <DiscountBadge percentage={product.discountPercentage} />

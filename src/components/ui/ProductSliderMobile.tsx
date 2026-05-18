@@ -26,7 +26,6 @@ const  ProductSliderMobile: React.FC<ProductSliderMobileProps> = ({
 
     return (
         <div className="pr-4" dir="rtl">
-            {/* آیکون و متن بالای لیست */}
             <div className="flex items-center mb-4">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +43,6 @@ const  ProductSliderMobile: React.FC<ProductSliderMobileProps> = ({
                 <h2 className="text-lg font-bold">{title}</h2>
             </div>
 
-            {/* لیست محصولات */}
             <SwiperSlider
                 items={grouped}
                 slidesPerView={1.5}
@@ -54,7 +52,6 @@ const  ProductSliderMobile: React.FC<ProductSliderMobileProps> = ({
                     <div className="flex flex-col gap-2">
                         {group.map((product) => (
                             <div key={product.id} className="flex flex-row items-center border border-gray-300 rounded-md overflow-hidden gap-2">
-                                {/* عکس */}
                                 <div className="w-[72px] aspect-square flex-shrink-0 bg-gray-100 flex items-center justify-center rounded-lg overflow-hidden">
                                     <img
                                         src={product.image}
@@ -63,13 +60,10 @@ const  ProductSliderMobile: React.FC<ProductSliderMobileProps> = ({
                                     />
                                 </div>
 
-                                {/* رتبه */}
                                 <div className="flex-shrink-0 flex items-center justify-center px-1 gap-1">
                                     <span className="bg-red-500 text-white rounded-full w-[22px] aspect-square flex items-center justify-center text-xs font-bold">
                                         {product.rank}
                                     </span>
-
-                                    {/* عنوان */}
                                     <div className="flex-1 px-1 text-right text-xs line-clamp-2 leading-4">{product.title}</div>
                                 </div>
                             </div>

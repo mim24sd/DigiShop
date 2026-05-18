@@ -14,8 +14,6 @@ export const ProductCardList: React.FC<{ products: DiscountedProduct[] }> = ({pr
     return (
         <div dir="rtl" className="w-full max-w-[1360px] sm:mx-auto px-0 lg:px-4 xl:px-0">
             <div className="w-full border border-gray-200 rounded-2xl overflow-hidden" dir="rtl">
-
-                {/* Header */}
                 <div className="flex items-center justify-center gap-2 py-3 lg:py-4">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                          stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" color="#ef4056"
@@ -31,10 +29,7 @@ export const ProductCardList: React.FC<{ products: DiscountedProduct[] }> = ({pr
                     </h2>
                 </div>
 
-                {/* 👇 این لایه padding داره */}
                 <div className="p-4 bg-white">
-
-                    {/* 👇 این لایه فقط برای خط‌هاست */}
                     <div className="bg-gray-200 overflow-hidden rounded-xl">
 
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-[1px]">

@@ -1,8 +1,6 @@
 import React, { useMemo } from "react";
 import SwiperSlider from "./SwiperSlider";
 import ProductCard from "./base/ProductCard";
-// حتما AmazingHeader و تایپ DiscountedProduct را اینجا Import کن
-// import { AmazingHeader } from "./AmazingHeader";
 
 interface MobileCountdownSliderProps {
     products: DiscountedProduct[];
@@ -14,11 +12,10 @@ interface MobileCountdownSliderProps {
 export default function MobileCountdownSlider({
                                                   products,
                                                   remainingSeconds,
-                                                  backgroundColor = "#e0334e", // رنگ پیش‌فرض: قرمز
-                                                  images = [], // تصاویر دیفالت رو در صورت نیاز اینجا ایمپورت و ست کن
+                                                  backgroundColor = "#e0334e",
+                                                  images = [],
                                               }: MobileCountdownSliderProps) {
 
-    // آماده‌سازی آیتم‌ها برای اسلایدر
     const mobileItems = useMemo(() => {
         return products.map((product) => ({
             id: product.id,
@@ -32,9 +29,8 @@ export default function MobileCountdownSlider({
             <section
                 dir="rtl"
                 className="w-full overflow-hidden rounded-2xl py-4"
-                style={{ backgroundColor }} // استفاده از استایل اینلاین برای رنگ داینامیک
+                style={{ backgroundColor }}
             >
-                {/* هدر موبایل */}
                 <div className="px-4 pb-4">
                     <AmazingHeader
                         images={images}
@@ -43,7 +39,6 @@ export default function MobileCountdownSlider({
                     />
                 </div>
 
-                {/* اسلایدر موبایل */}
                 <SwiperSlider
                     items={mobileItems}
                     slidesPerView={2.2}

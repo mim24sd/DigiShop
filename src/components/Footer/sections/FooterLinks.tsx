@@ -12,7 +12,6 @@ import appLogo from "../../../assets/images/logo/footer.webp";
 const FooterLinks = () => {
     return (
         <div>
-            {/* mobile boxes */}
             <div className="lg:hidden">
                 <div className="flex items-center justify-between py-3 border-b border-b-gray-200">
                     <div className="flex items-center gap-3">
@@ -71,7 +70,6 @@ const FooterLinks = () => {
                     ))}
                 </div>
 
-                {/* desktop aside */}
                 <div className="hidden lg:flex flex-col gap-8">
                     <div>
                         <h3 className="mb-4 text-base font-bold text-gray-800">

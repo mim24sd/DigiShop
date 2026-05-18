@@ -1,5 +1,4 @@
 import {ProductCardList, type DiscountedProduct} from "../ui/ProductCardList.tsx";
-import ProductSliderMobile from "../ui/ProductSliderMobile.tsx";
 
 export const sampleProducts: DiscountedProduct[] = [
     {

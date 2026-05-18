@@ -9,7 +9,7 @@ export default function SupermarketAmazingOffers() {
                 <AmazingOfferBanner/>
             </div>
             <div className="block lg:hidden">
-                <CountdownProductSlider products={sampleProducts} timer="11:14:45" bgColor="linear-gradient(225deg, rgb(107, 185, 39) 0%, rgb(157, 196, 77) 100%)" />
+                <CountdownProductSlider products={sampleProducts} bgColor="linear-gradient(225deg, rgb(107, 185, 39) 0%, rgb(157, 196, 77) 100%)" />
             </div>
         </>
     );

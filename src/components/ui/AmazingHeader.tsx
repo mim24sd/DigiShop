@@ -1,6 +1,5 @@
 import { ChevronLeft } from "lucide-react";
 
-// --- توابع کمکی برای فرمت زمان ---
 const pad = (value: number) => value.toString().padStart(2, "0");
 
 const formatTime = (totalSeconds: number) => {
@@ -25,10 +24,8 @@ export const AmazingHeader = ({
     return (
         <a
             href="/public"
-            // کانتینر اصلی تبدیل به flex-col شد تا المان‌ها زیر هم قرار بگیرند
             className={`flex flex-col gap-4 text-white ${className}`}
         >
-            {/* ردیف بالا: تایمر و تصاویر به صورت افقی */}
             <div className="flex w-full items-center justify-between sm:justify-start sm:gap-6">
                 <div className="flex items-center gap-3">
                     <img
@@ -49,8 +46,6 @@ export const AmazingHeader = ({
                 </div>
             </div>
 
-            {/* ردیف پایین: دکمه مشاهده همه */}
-            {/* با justify-end در حالت RTL، دکمه سمت چپ قرار می‌گیرد */}
             <div className="flex w-full items-center justify-end">
                 <span className="flex items-center text-sm font-medium">
                     مشاهده همه

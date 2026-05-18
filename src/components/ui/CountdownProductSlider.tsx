@@ -8,7 +8,6 @@ import amazingShortTypo from "../../assets/images/amazing/AmazingShortTypo.svg";
 import AmazingLogo from "../../assets/images/amazing/AmazingLogo.svg";
 import type {DiscountedProduct} from "./ProductCardList.tsx";
 
-// --- Types ---
 type SliderItem =
     | { id: string; type: "featured"; image: string }
     | { id: string; type: "product"; product: DiscountedProduct };
@@ -16,7 +15,6 @@ type SliderItem =
 interface CountdownProductSliderProps {
     products: DiscountedProduct[];
     images?: string[];
-    timer:string;
     bgColor:string;
 }
 
@@ -26,7 +24,6 @@ interface AmazingPromoContentProps {
     desktop?: boolean;
 }
 
-// --- Utils ---
 const TimeUtils = {
     pad: (num: number) => num.toString().padStart(2, "0"),
     toPersianNumber: (num: string | number) =>
@@ -39,7 +36,6 @@ const TimeUtils = {
     }),
 };
 
-// --- Sub-Components ---
 const TimeUnit = ({value}: { value: string }) => (
     <span
         className="bg-white text-bold text-black rounded-md max-w-[26px] min-w-[26px] aspect-square text-center content-center">
@@ -67,7 +63,6 @@ const AmazingPromoContent = ({
                                  desktop = false,
                              }: AmazingPromoContentProps) => {
     const content = desktop ? (
-        // Desktop View
         <div
             className="flex h-[260px] w-full flex-col items-center justify-between rounded-2xl px-2 text-white">
             <img alt="amazing typo" src={images[0]} className="aspect-square w-[88px]"/>
@@ -80,7 +75,6 @@ const AmazingPromoContent = ({
       </span>
         </div>
     ) : (
-        // Mobile View
         <div className="flex items-center justify-between text-white w-full">
             <div className="flex items-center gap-3">
                 <img alt="amazing image" src={images[1]} className="w-[24px] shrink-0"/>
@@ -98,7 +92,6 @@ const AmazingPromoContent = ({
     return <a href="/public">{content}</a>;
 };
 
-// --- Custom Hook ---
 const useCountdown = (initialSeconds: number) => {
     const [seconds, setSeconds] = useState(initialSeconds);
 
@@ -111,13 +104,12 @@ const useCountdown = (initialSeconds: number) => {
 
     return seconds;
 };
-// --- Main Component ---
+
 const AMAZING_IMAGES_DEFAULT = [amazingTypo, AmazingLogo, amazingShortTypo];
 
 export default function CountdownProductSlider({
                                                    products,
                                                    bgColor = "#e0334e",
-                                                   timer,
                                                    images = AMAZING_IMAGES_DEFAULT,
                                                }: CountdownProductSliderProps): JSX.Element {
     const remainingSeconds = useCountdown(14 * 3600 + 12 * 60 + 7);
@@ -135,12 +127,10 @@ export default function CountdownProductSlider({
         <div className="w-full max-w-[1360px] sm:mx-auto px-0 lg:px-4 xl:px-0">
             <section dir="rtl" className='w-full overflow-hidden rounded-0 lg:rounded-2xl py-4' style={{ background: bgColor }}>
 
-                {/* Mobile Header */}
                 <div className="px-4 pb-4 lg:hidden">
                     <AmazingPromoContent images={images} remainingSeconds={remainingSeconds}/>
                 </div>
 
-                {/* Desktop Slider */}
                 <div className="hidden lg:block">
                     <SwiperSlider
                         items={desktopItems}
@@ -170,7 +160,6 @@ export default function CountdownProductSlider({
                     />
                 </div>
 
-                {/* Mobile Slider */}
                 <div className="lg:hidden">
                     <SwiperSlider
                         items={mobileItems}

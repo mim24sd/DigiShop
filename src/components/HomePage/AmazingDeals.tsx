@@ -151,7 +151,7 @@ export const sampleProducts: DiscountedProduct[] = [
 export default function AmazingDeals() {
     return (
         <section>
-            <CountdownProductSlider products={sampleProducts} timer="17:14:45"/>
+            <CountdownProductSlider products={sampleProducts}/>
         </section>
     )
 }

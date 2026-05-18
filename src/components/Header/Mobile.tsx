@@ -117,7 +117,6 @@ const MobileHeader = () => {
 
     return (
         <div className="flex flex-col gap-3 py-3 lg:hidden">
-            {/* ردیف اول */}
             <div className="no-scrollbar w-full overflow-x-auto pb-1">
                 <div className="inline-flex min-w-full gap-2">
                     {mobileItems.map((item) => {
@@ -185,7 +184,6 @@ const MobileHeader = () => {
                     })}</div>
             </div>
 
-            {/* ردیف دوم */}
             <div className="flex items-center gap-2">
                 <div className="relative flex-1">
                     <Search
@@ -230,7 +228,6 @@ const MobileHeader = () => {
 
             </div>
 
-            {/* ردیف سوم */}
             <button
                 type="button"
                 className="self-start flex h-10 w-fit cursor-pointer items-center gap-1 rounded-xl"

@@ -11,7 +11,6 @@ const FooterTopBar = () => {
 
     return (
         <div className="">
-            {/* desktop */}
             <div className="hidden lg:flex lg:items-center lg:justify-between">
                 <div className="flex flex-col items-start gap-6">
                     <img
@@ -39,7 +38,6 @@ const FooterTopBar = () => {
                 </button>
             </div>
 
-            {/* mobile / tablet */}
             <div className="flex justify-center lg:hidden">
                 <button
                     type="button"
