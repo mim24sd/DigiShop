@@ -1,7 +1,6 @@
 import ProductSlider from "../ui/ProductSlider.tsx";
 import ProductSliderMobile from "../ui/ProductSliderMobile.tsx";
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const sampleData = [
     { id: "1",  rank: "۱",  title: "نوشیدنی آناناس رانی ۲۴۰ میلی‌لیتر بسته ۶ عددی",  image: "https://picsum.photos/seed/product1/400/400" },
     { id: "2",  rank: "۲",  title: "قرص بیوپانتن یوروویتال ۶۰ عددی",                 image: "https://picsum.photos/seed/product2/400/400" },
@@ -25,16 +24,13 @@ export const sampleData = [
     { id: "20", rank: "۲۰", title: "لپ‌تاپ ایسوس VivoBook",                            image: "https://picsum.photos/seed/product20/400/400" },
 ];
 
-// نام تابع اصلاح شد (حذف کاراکتر غیرمجاز)
 export default function TopSellingProducts() {
     return (
     <section className="w-full px-4">
-        {/* Desktop */}
         <div className="hidden lg:block">
             <ProductSlider products={sampleData} />
         </div>
 
-        {/* Mobile */}
         <div className="lg:hidden">
             <ProductSliderMobile products={sampleData} />
         </div>

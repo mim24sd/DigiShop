@@ -7,7 +7,6 @@ interface BrandsProps {
     image: string
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const brands: BrandsProps[] = [
     {id: "1", name: "Apple", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/apple.svg"},
     {id: "2", name: "Samsung", image: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/samsung.svg"},
@@ -31,12 +30,10 @@ export const brands: BrandsProps[] = [
 export default function TopBrands() {
     return (
         <section className="w-full px-4">
-            {/* Desktop */}
             <div className="hidden lg:block">
                 <BrandSlider brands={brands} slidesPerView={6}/>
             </div>
 
-            {/* Mobile */}
             <div className="lg:hidden">
                 <BrandSliderMobile brands={brands}/>
             </div>

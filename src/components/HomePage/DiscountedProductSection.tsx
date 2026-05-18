@@ -1,7 +1,6 @@
 import {ProductCardList, type DiscountedProduct} from "../ui/ProductCardList.tsx";
 import ProductSliderMobile from "../ui/ProductSliderMobile.tsx";
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const sampleProducts: DiscountedProduct[] = [
     {
         id: "1",

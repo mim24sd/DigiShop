@@ -16,7 +16,6 @@ const createImages = (prefix: string) => [
     `https://picsum.photos/seed/${prefix}-4/300/300`,
 ];
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const MOCK_RECOMMENDATIONS: ProductSection[] = [
     {
         id: "1",
